@@ -1,0 +1,56 @@
+*, ::after, ::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: #222;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.circle-btn{
+    outline: none;
+    background:none;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    transition:transform 0.4s ease;
+}
+.circle-btn:hover{
+    transform: scale(1.2);
+}
+.circle-btn:active{
+    transform: scale(1.5);
+}
+
+.circle-btn span{
+    position: absolute;
+    top: 45%;
+    left: 50%;
+ font-size:30px;
+    transform: translate(-50%, -50%);
+    /* will-change: transform; */
+    will-change:transform ;
+}
+
+svg{
+transform: rotate(-90deg);
+}
+.bg-svg{
+    stroke:#b8b8b834;
+    stroke-width:4;
+}
+.filled{
+  stroke:#fff;
+  stroke-width: 4;  
+  stroke-dasharray:1;
+  stroke-dashoffset:1 ;
+  transition: .2s ease-in-out;
+}
+.circle-btn:hover .filled{
+    stroke-dashoffset:0 ;
+
+}
